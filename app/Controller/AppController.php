@@ -33,8 +33,6 @@ class AppController extends Controller
         {
           $nomImage = "IMAGE/".time().rand().'.'.$imageExtension;
           move_uploaded_file($_FILES['image']['tmp_name'], $nomImage );
-          echo "<h1>image envoyer avec succée</h1>";
-          echo "<img src = '".$nomImage."'>";
           return $nomImage;
         }
       }

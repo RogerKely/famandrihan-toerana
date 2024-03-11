@@ -8,10 +8,6 @@ class AppController extends \App\Controller\AppController
   public function __construct()
   {
     parent::__construct();
-    if(!$this->Connected())
-    {
-      header("location:".URLROOT."/index.php?p=login.loginChoice");
-    }
   }
 
   /**
@@ -22,8 +18,4 @@ class AppController extends \App\Controller\AppController
     $this->$modelName = App::getInstance()->getTable($modelName);
   }
 
-  public function Connected()
-  {
-    return isset($_SESSION['authentification']);
-  }
 }

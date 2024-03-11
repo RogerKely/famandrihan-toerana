@@ -8,10 +8,6 @@ class AppController extends \App\Controller\AppController
   public function __construct()
   {
     parent::__construct();
-    if(!$this->Connected())
-    {
-      $this->render("loginChoix");
-    }
     
   } 
   public function Connected()
